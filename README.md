@@ -61,6 +61,8 @@ Starting from scratch:
 The machine will now download the MacOS version it was build for (so very old). When started choose to restore the OS and all installation. Just let it do what it wants. If it cannot write to the disk (because there is old stuff on it), just wipe all off, untill you have a complete free SSD.
 - It will take some time, but at some moment it will restart and you have a running Macbook with the original MacOs on it. Connect it to Wifi. 
 No need to update the MacOS. It will be used only short time. 
+NB: If no Windows computer available, it might be usefull to install windows on the Macbook, using Bootcamp. It is a Mac application what is capable of adding a windows partition + installation. Takes a lot of time, but worked fine, when I needed it. You can then login to Windows for using rufus + creating Windows Installer. See further. 
+
 ### Install step 0.1: Install OCLP
 Download OCLP latest version, Install, and Create an Installer, just follow the instructions. Choose the MacOS you want (I would always try the latest one (now Seqouia). It will take time, because it is 15 Gb download, unpack, prepare, and then upload to the USB. But then you have an Installer, and the real work can start. 
 ### Install step 1. Install MacOs + OCLP 
@@ -76,6 +78,52 @@ NB If the keyboard an touchpad do not work. No problem, just insert USB Keyboard
 Let OCLP do its job. Install to disk, Install to EFI (be sure to choose the SDD here!).
 Reboot (Pull USB out first), Hold down the Alt/OPtion. Choose EFI first, then MacOS. 
 Connect to Wifi, start the OCLP again. And choose Post Install Root Patch. OCLP might say it is already done. Just install the patches again. My experience is that it downloads more then first time and the install is more complete. (to be sure I might do this more often after a new reboot).
+Do all updates on MacOs. 
 
-  
-  
+When you only want MacOs, you are OK now, when you only want Windows or a combination: READ ON. 
+
+### Install step 2. Install MacOs + Windows 
+OK, for Windows you need an installer. And latest Windows10 (or even 11) will install like that on an Intel Macbook. This is where rufus comes in. 
+Rufus will download a recent Windows10 or 11 ISO; add a couple of bypass, tricks etcetera, to make the installer work. Just follow the manual. Almost impossible to do anything wrong :-) And if so, just start over. 
+OK. when you got your Windows Install USB 
+
+#### Add Bootcamp software. 
+Windows needs a couple of drivers etcetera to run on a Macbook. Apple provides these Bootcamp files when you run Bootcamp installation from within MacOs. You will need an extra USB (third one!) to place those files on. Sometimes these Bootcamp files are to old, and you have to download a newer version (and these are hard to find on internet). See links page. 
+
+##### A Install Windows + MacOS. 
+Same as in step 0. Start Bootcamp from MacOS, set the size of the harddisk you want for Windows and go. 
+Now the Bootcamp files are created (on USB 3). 
+When done shutdown; insert the Windows Rufus installer, boot the machine; hold down Option/Alt. Choose EFI boot and then Windows installer. 
+Do diskmanagement and check if the partition for windows is removed and/or formatted in correct version. 
+When Windows is almost finished: DO NOT REBOOT (if you do, you might have to start over with the Windows Installer). 
+Attach the keyboard + mouse. Insert USB3 and run Setup in the Bootcamp folder. 
+When Setup is finished: DO NOT REBOOT. 
+By now you are able to use Wifi. Do all updates in windows. Also go to Optional Updates and select all. These are mostly the Intel driver files for your Windows system. 
+Also run Apple Update, this will download lateste Bootcamp files. This will probably give errors when running updates. No problem, this will be solved later. 
+Now REBOOT. Pull USB's out. 
+Hold down Option/Alt when rebooting, choose EFI boot, then Windows. 
+All updates will take a lot of time. But and the end you are in Windows. 
+Run Apple Update again. Now the updates will probably run wihtout errors. 
+Run Windows updates. Keep updating untill all is done. 
+
+##### B Install ONLY Windows  
+Almost the same as A. The start is different. 
+Because you installed OCLP with MacOS, you now have a nice OpenCore buffer between the old Macbook and the new Windows. 
+We will use that:
+Insert the Windows installer, hold Option/Alt first choose EFI boot, then the Windows installer. 
+Go to diskmanager: Be carefull to keep the EFI partition 200 mB at the beginning and delete all other partitions. 
+Install Windows on the free space. 
+Pick up instructions at A for the rest. 
+Last reboot use Option/Alt -> EFI boot -> Windows. 
+Next time the machine will go in these two steps to Windows by itself. 
+
+Congratulations: You have a Macbook installed with latest systems you wanted. 
+
+
+Specials:
+- Displays from 2014 not working in 2015 (have magnet ready)
+- Use Labor for special stuff (Windows 11)
+- Disable  Bootpicker
+- WIndows LOT for long time 
+- Where to find Bootcamp files?
+- 
