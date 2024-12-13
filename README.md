@@ -131,24 +131,23 @@ And you will also need https://7-zip.org/download.html
 
 ## Disable  Bootpicker
 The way I do this: 
-# Linux on USB (I use Mint). Start Linux
-Open a Terminal window. (To do this, click the Ubuntu icon in the top-left corner of the screen, type "terminal", and either hit Enter or select the Terminal option.)
-Type sudo fdisk -l. This should produce output that identifies the ESP (among other things), like this:
-.
+# Linux on USB (I use Mint). Start Linux <br/> 
+Open a Terminal window. (To do this, click the Ubuntu icon in the top-left corner of the screen, type "terminal", and either hit Enter or select the Terminal option.)<br/> 
+Type sudo fdisk -l. This should produce output that identifies the ESP (among other things), like this:<br/> 
+.<br/> 
+<br/> 
+Device        Start      End  Sectors  Size Type<br/> 
+/dev/sda1      2048  1128447  1126400  550M EFI System<br/> 
+/dev/sda2   1128448 79626398 78497951 37.4G Linux filesystem<br/> 
+/dev/sda3  79628288 85917854  6289567    3G Linux swap<br/> 
+Identify your ESP; it should specify EFI System in the Type column. In this example, it's /dev/sda1. (The ESP is usually /dev/sda1 or /dev/sda2, but that's just what's most common.)<br/> 
+With the ESP identified, mount it to /mnt, as in sudo mount /dev/sda1 /mnt<br/> 
 
-Device        Start      End  Sectors  Size Type
-/dev/sda1      2048  1128447  1126400  550M EFI System
-/dev/sda2   1128448 79626398 78497951 37.4G Linux filesystem
-/dev/sda3  79628288 85917854  6289567    3G Linux swap
-Identify your ESP; it should specify EFI System in the Type column. In this example, it's /dev/sda1. (The ESP is usually /dev/sda1 or /dev/sda2, but that's just what's most common.)
-With the ESP identified, mount it to /mnt, as in sudo mount /dev/sda1 /mnt
-
-cd to /mnt/ (EFI) go to OC and open configfile. 
-
-Scroll down to Misc block and keep scrolling untill you see bootpicker. Change true to false 
-
-Save with Ctrl X -> Yes 
-
-Reboot
-
-Done. 
+cd to /mnt/ (EFI) go to OC and open configfile. <br/> 
+Scroll down to Misc block and keep scrolling untill you see bootpicker. Change true to false <br/> 
+Save with Ctrl X -> Yes <br/> 
+<br/> 
+Reboot<br/> 
+<br/> 
+Done. <br/> 
+<br/> 
