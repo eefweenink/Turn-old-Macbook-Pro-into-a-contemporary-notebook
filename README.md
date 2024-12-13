@@ -143,7 +143,8 @@ Device        Start      End  Sectors  Size Type<br/>
 Identify your ESP; it should specify EFI System in the Type column. In this example, it's /dev/sda1. (The ESP is usually /dev/sda1 or /dev/sda2, but that's just what's most common.)<br/> 
 With the ESP identified, mount it to /mnt, as in sudo mount /dev/sda1 /mnt<br/> 
 
-cd to /mnt/ (EFI) go to OC and open configfile. <br/> 
+cd to /mnt/ (EFI) go to OC and edit configfile. <br/>
+(I use Nano for editign)<br/> 
 Scroll down to Misc block and keep scrolling untill you see bootpicker. Change true to false <br/> 
 Save with Ctrl X -> Yes <br/> 
 <br/> 
