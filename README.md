@@ -144,7 +144,11 @@ Identify your ESP; it should specify EFI System in the Type column. In this exam
 With the ESP identified, mount it to /mnt, as in sudo mount /dev/sda1 /mnt
 
 cd to /mnt/ (EFI) go to OC and open configfile. 
+
 Scroll down to Misc block and keep scrolling untill you see bootpicker. Change true to false 
+
 Save with Ctrl X -> Yes 
+
 Reboot
+
 Done. 
