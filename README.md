@@ -133,8 +133,8 @@ And you will also need https://7-zip.org/download.html
 The way I do this: 
 # Linux on USB (I use Mint). Start Linux <br/> 
 Open a Terminal window. (To do this, click the Ubuntu icon in the top-left corner of the screen, type "terminal", and either hit Enter or select the Terminal option.)<br/> 
-Type sudo fdisk -l. This should produce output that identifies the ESP (among other things), like this:<br/> 
-.<br/> 
+Type sudo fdisk -l <br/> 
+This should produce output that identifies the ESP (among other things), like this:<br/> 
 <br/> 
 Device        Start      End  Sectors  Size Type<br/> 
 /dev/sda1      2048  1128447  1126400  550M EFI System<br/> 
