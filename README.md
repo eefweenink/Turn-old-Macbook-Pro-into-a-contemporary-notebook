@@ -83,12 +83,12 @@ Do all updates on MacOs.
 When you only want MacOs, you are OK now, when you only want Windows or a combination: READ ON. 
 
 ### Install step 2. Install MacOs + Windows 
-OK, for Windows you need an installer. And latest Windows10 (or even 11) will install like that on an Intel Macbook. This is where rufus comes in. 
+OK, for Windows you need an installer. And the plain latest Windows10 (or even 11) will not install like on an Intel Macbook. This is where rufus comes in. 
 Rufus will download a recent Windows10 or 11 ISO; add a couple of bypass, tricks etcetera, to make the installer work. Just follow the manual. Almost impossible to do anything wrong :-) And if so, just start over. 
 OK. when you got your Windows Install USB 
 
 #### Add Bootcamp software. 
-Windows needs a couple of drivers etcetera to run on a Macbook. Apple provides these Bootcamp files when you run Bootcamp installation from within MacOs. You will need an extra USB (third one!) to place those files on. Sometimes these Bootcamp files are to old, and you have to download a newer version (and these are hard to find on internet). See links page. 
+Windows needs a couple of drivers etcetera to run on a Macbook. Apple provides these Bootcamp files when you run Bootcamp installation from within MacOs. You will need an extra USB (third one!) to place those files on. Sometimes these Bootcamp files are too old, and you have to download a newer version (and these are hard to find on internet). See links page. 
 
 ##### A Install Windows + MacOS. 
 Same as in step 0. Start Bootcamp from MacOS, set the size of the harddisk you want for Windows and go. 
@@ -124,7 +124,7 @@ Specials:
 - Displays from 2014 not working in 2015 (have magnet ready)
 - Use Labor for special stuff (Windows 11)
 - Disable  Bootpicker
-- WIndows LOT for long time 
+- Windows LOT for long time 
 ## Where to find Bootcamp files? 
 And you will also need https://7-zip.org/download.html 
 - 
